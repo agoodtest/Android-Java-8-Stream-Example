@@ -43,3 +43,11 @@ dependencies {
     compile 'com.annimon:stream:1.0.3'
     compile 'com.android.support:appcompat-v7:23.0.1'
 }
+retrolambda {
+    jdk System.getenv("JAVA8_HOME")
+    oldJdk System.getenv("JAVA7_HOME")
+    javaVersion JavaVersion.VERSION_1_7
+    jvmArgs '-arg1', '-arg2'
+    defaultMethods false
+    incremental true
+}
